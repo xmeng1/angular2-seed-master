@@ -9,9 +9,11 @@ import {Role} from "./role";
 export class HomeComponent implements OnInit{
   title = 'app works!';
   role: Role = new Role;
-  options: string[] = ['a', 'b', 'c', 'd', 'e'];
+  optionsObject: string[] = ['o1', 'o2', 'o3', 'o4', 'o5'];
+  optionsAction: string[] = ['a1', 'a2', 'a3', 'a4', 'a5'];
   ngOnInit(): void {
-    this.role.permissions = ['a', 'b', 'c', 'd', 'c'];
+    this.role.permissions = [{action:"a1", object:"o1"},{action:"a2", object:"o2"},
+      {action:"a4", object:"o4"},{action:"a2", object:"o2"},{action:"a5", object:"o5"},];
   }
 
 }

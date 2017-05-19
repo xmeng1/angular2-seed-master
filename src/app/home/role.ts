@@ -1,3 +1,4 @@
+import {Permission} from "./permission";
 export class Role {
-  permissions: string[];
+  permissions: Permission[];
 }

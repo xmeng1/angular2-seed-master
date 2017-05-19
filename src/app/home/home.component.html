@@ -1,9 +1,16 @@
 <h3>Home Component</h3>
 <p>Welcome to Angular Seed</p>
 <li *ngFor="let x of role.permissions;let i = index;">
-  <select name="perm" [(ngModel)]="role.permissions[i]"
-          [value]="role.permissions[i]">
-    <option   *ngFor="let item of options">
+  <select name="perm" [(ngModel)]="role.permissions[i].action"
+          [value]="role.permissions[i].action">
+    <option   *ngFor="let item of optionsAction">
+      {{item}}
+    </option>
+  </select>
+
+  <select name="perm" [(ngModel)]="role.permissions[i].object"
+          [value]="role.permissions[i].object">
+    <option   *ngFor="let item of optionsObject">
       {{item}}
     </option>
   </select>
