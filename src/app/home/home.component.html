@@ -1,0 +1,10 @@
+<h3>Home Component</h3>
+<p>Welcome to Angular Seed</p>
+<li *ngFor="let x of role.permissions;let i = index;">
+  <select name="perm" [(ngModel)]="role.permissions[i]"
+          [value]="role.permissions[i]">
+    <option   *ngFor="let item of options">
+      {{item}}
+    </option>
+  </select>
+</li>
